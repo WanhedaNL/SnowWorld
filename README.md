@@ -1,2 +1,0 @@
-# SnowWorld
-School project
