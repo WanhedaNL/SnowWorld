@@ -9,8 +9,15 @@
 
     Frontend: React.js / Vite (voor een snelle en moderne gebruikersinterface)
 
-    Backend: Node.js & Express (voor contentbeheer en API-services)
+    Backend: PHP & SQL
 
-    Styling: SCSS (voor modulaire en schaalbare CSS-architectuur)
+    Styling: CSS (voor modulaire en schaalbare CSS-architectuur)
 
     Hardware: Geoptimaliseerd voor Smart TV-browsers en Raspberry Pi
+📁 Projectstructuur
+
+    /admin: Interface voor contentbeheerders om de uitzendingen te beheren.
+
+    /display: De publieke interface die op de schermen in de vestigingen wordt getoond.
+
+    /backend: API-logica en opslag van media-assets.
