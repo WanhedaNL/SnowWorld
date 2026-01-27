@@ -1,3 +1,29 @@
+<?php
+require "db.php";
+
+$result = $pdo->query("SELECT slot, filename FROM screen_images");
+$rows = $result->fetchAll(PDO::FETCH_ASSOC);
+
+$images = [];
+foreach ($rows as $row) {
+    $images[$row["slot"]] = $row["filename"];
+}
+
+function img($slot, $images) {
+    $file = $images[$slot] ?? "default.png";
+    return "uploads/" . $file . "?v=" . time();
+}
+?>
+
+
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,24 +40,20 @@
         </header>
         
         <aside class="links_reclam">
-            <div class="ad-card"><img src="uploads/Test.jpeg" alt="Ad"></div>
-            <div class="ad-card"><img src="uploads/Test.jpeg" alt="Ad"></div>
-        </aside>
+            <img src="<?= img('left_top', $images) ?>">
+            <img src="<?= img('left_bottom', $images) ?>">        </aside>
                
         <article class="midden_tekst">
-            <img src="uploads/Test.jpeg" alt="Featured">
+                <img src="<?= img('center', $images) ?>">     
         </article>
 
         <aside class="rechts_nieuws">
             <section class="rechts_blok--ust">
-                <img src="uploads/Test.jpeg" alt="News Top">
+                <img src="<?= img('right_top', $images) ?>">
             </section>
             <section class="rechts_blok--alt">
-                <img src="uploads/Test.jpeg" alt="News Bottom">
-                <div class="news-caption">
-                    <h3>Breaking News</h3>
-                    <p>Important information is displayed here for the viewers.</p>
-                </div>
+                <img src="<?= img('right_bottom', $images) ?>">
+                
             </section>
         </aside>
 
