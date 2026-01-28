@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0f172a;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+form {
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    background: #1e293b;
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+form:hover {
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.2); 
+    width: 420px;
+    padding: 40px;
+}
+
+form select, form input, form button {
+    padding: 10px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #d8e0e7;
+    color: #1e293b;
+    outline: none;
+    transition: background 0.2s;
+        transition: 0.2s ;
+
+}
+
+form button {
+    background-color: #38bdf8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+            transition: 0.2s ;
+
+}
+
+
+form h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+form select , form input {
+    background-color: rgb(221, 219, 212);
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 900;
+
+
+
+}
+form button {
+    background-color: #0284c7;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 900;
+}
+form select:hover, form input:hover {
+    box-shadow: 
+        0 0 10px rgba(56, 189, 248, 0.4), 
+        inset 0 0 5px rgba(255, 255, 255, 0.2);
+    background-color: #ffffff;
+    transform: translateY(-2px); 
+    transition: 0.2s ease;
+    outline: none;
+}
+form button:hover {
+    box-shadow: 
+        0 0 15px rgba(56, 189, 248, 0.6),
+        0 0 30px rgba(56, 189, 248, 0.2);
+    background-color: #0ea5e9; 
+    transform: scale(1.03); 
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

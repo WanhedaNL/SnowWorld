@@ -14,3 +14,4 @@ $pdo->prepare("UPDATE screen_images SET filename=? WHERE slot=?")
 
 header("Location: admin.php");
 exit;
+?>
